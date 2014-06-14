@@ -1,5 +1,5 @@
 /**
-*Motor
+*KeyController
 *Copyright 2014
 *Written by Aayush Bhandari, Wilson Hoang, Russell Leong
 *6/11/2014

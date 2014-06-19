@@ -1,21 +1,18 @@
 #ifndef COLLISIONCONTROLLER_H
 #define COLLISIONCONTROLLER_H
 #include "Arduino.h"
-
+#include <NewPing.h>
 
 class collisionController
 {
 public:
-    collisionController(int upPin, int downPin,int leftPin, int rightPin, int onPin, int drivePin, int neutralPin, int reversePin);
-    bool onPinActive();
-    bool drivePinActive();
-    bool neutralPinActive();
-    bool reversePinActive();
-    bool frontDetect();//detects distance from object in front
-    void detectionResponse();
-
+    collisionController(int echoPin,triggerPin);
+    double recieveDistance();
+    
 protected:
 private:
+    double distance;
+    NewPing* sonar;
 };
 
-#endif // COLLISIONCONTROLLER_H
+#endif

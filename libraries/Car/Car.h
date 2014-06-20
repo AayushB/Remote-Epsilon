@@ -13,6 +13,7 @@
 #include "Motor.h"
 #include <Servo.h>
 #include "KeyController.h"
+#include "CollisionController.h"
 class Car
 {
 public:
@@ -23,7 +24,11 @@ public:
     //motorInputPin2 controls the back direction in an On state
     //servoPin contols the servo motor
     void setMode(Direction direction);
+    //main update for the car, includes basic movement and steering
     void update(KeyController controller);
+    //collision sesnor update for the car
+    void collisionUpdate(CollisionController controller);
+    
     
 private:
     Motor* myMotor;

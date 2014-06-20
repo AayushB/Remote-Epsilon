@@ -39,6 +39,12 @@ void Car::setMode(Direction direction)
 	myMotor->setDirection(direction);
 }
 
+
+//--------------------------------------------------------------------------------------
+//          Main update for the car, includes basic movement and steering
+//--------------------------------------------------------------------------------------
+
+
 void Car::update(KeyController controller)
 {
     unsigned long currMillis=millis();//sets the current time to the time since
@@ -148,5 +154,23 @@ void Car::update(KeyController controller)
                 myMotor->speedDown();//slows down motor RPM while down button is pressed
             }
         }
+    }
+}
+
+
+
+void Car::collisionUpdate(CollisionController controller)
+{
+    if(on)
+    {
+    double distance=controller.recieveDistance();
+        //Serial.println(distance);
+    if(distance>0 && distance<20){
+        myMotor->setDirection(NEUTRAL);
+        //recieve the angle of the farthest distance
+        //and decide directional change based on that angle
+        
+    }
+        
     }
 }

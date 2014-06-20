@@ -1,5 +1,5 @@
 /**
-*Car
+*Motor
 *Copyright 2014
 *Written by Aayush Bhandari, Wilson Hoang, Russell Leong, Jason Huang
 *6/11/2014

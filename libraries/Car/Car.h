@@ -1,5 +1,5 @@
 /**
-*Car
+*Motor
 *Copyright 2014
 *Written by Aayush Bhandari, Wilson Hoang, Russell Leong, Jason Huang
 *6/11/2014
@@ -27,7 +27,7 @@ public:
     
 private:
     Motor* myMotor;
-    Servo myServo;
+    //this is part of the delay
     long prevMillisUp;
     long prevMillisDown;
     long prevMillisOn;
@@ -36,8 +36,11 @@ private:
     long intervalDown;
     long intervalOn;
     long intervalMode;
+    //this is part of Servo
+    Servo myServo;
     int angle;
     int servoPin;
+    //this is the state of the car whther its on or off
     bool on;
 };
 
